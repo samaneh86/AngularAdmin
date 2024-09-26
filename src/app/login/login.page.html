@@ -1,0 +1,41 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">لاگین</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+
+       <form [formGroup]="loginForm" (submit)="submitLoginForm()">
+        <ion-item>
+          <ion-label position="fixed">نام کاربری</ion-label>
+          <ion-input formControlName="email"></ion-input>
+          <p>
+            <span *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].errors?.['required'] ">لطفا نام کاربری خود را وارد کنید</span>
+            <span   *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].errors?.['email'] ">لطفا نام کاربری خود را با فرمت مناسب وارد کنید</span>
+          </p>
+         
+
+        </ion-item>
+
+        
+      <ion-item>
+        <ion-label position="fixed">کلمه عبور </ion-label>
+        <ion-input formControlName="password" ></ion-input>
+        <p>
+          <span *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].errors?.['required'] ">لطفا کلمه عبور را وارد کنید</span>
+        </p>
+        
+      </ion-item>
+
+       
+        <ion-button color="success" [disabled]="loginForm.invalid" type="submit">ارسال</ion-button>
+      
+       </form>
+        
+
+  </ion-grid>
+
+</ion-content>

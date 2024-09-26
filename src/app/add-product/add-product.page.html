@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">اضافه کردن محصولات جدید</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form [formGroup]="addProductForm">
+    <ion-item>
+      <ion-label>
+        نام محصول
+            </ion-label>
+            <ion-input type="text" formControlName="productName">
+        
+            </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        قیمت محصول
+            </ion-label>
+            <ion-input type="text"  formControlName="productPrice">
+        
+            </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        عکس محصول
+            </ion-label>
+            <ion-input type="text" formControlName="productImage">
+        
+            </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        توضیحات مختصری درباره محصول
+            </ion-label>
+            <ion-input type="text" formControlName="productShortDescription">
+        
+            </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        توضیحات کلی محصول
+            </ion-label>
+            <ion-textarea formControlName="productDescription">
+        
+            </ion-textarea>
+    </ion-item>
+    <ion-button color="success" (click)="send()">ارسال</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>header</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <span>{{currentUser.firstName  }}   </span>
+      <span>{{currentUser.lastName  }}  </span>
+  <div *ngIf="currentUser !=null">
+    <a (click)="logout()">خروج</a>
+  </div>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
